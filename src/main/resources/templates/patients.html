@@ -27,6 +27,10 @@
                     <td th:text="${p.dateOfBirth}"></td>
                     <td th:text="${p.sick}"></td>
                     <td th:text="${p.score}"></td>
+                    <td>
+                        <a onclick="return confirm('are you sure ?')"
+                           th:href="@{delete(id=${p.id}, keyword=${keyword}, page=${currentPage})}" class="btn btn-danger">Delete</a>
+                    </td>
                 </tr>
                 </thead>
             </table>
